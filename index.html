@@ -16,13 +16,17 @@
 <body class="bg-light text-center p-4">
 
   <div class="container">
-    <h1 class="mb-4">Ejemplo con Imagen y Portapapeles</h1>
+    <h1 class="mb-4">Cuenta bancaria para Transferencias</h1>
+    <h1 class="mb-4"> <p id="texto" class="lead">4217 4701 5062 2323</p>  </h1>
+    <h1 class="mb-4">Banco Oxxo Spin</h1>
+    <h1 class="mb-4"> Nombre:  <p id="texto2" class="lead">Jorge Abaham Gomez Granados</p>  </h1>
+    
 
     <!-- Imagen que se adapta -->
     <img src="Sin promo1.jpg" alt="Imagen adaptable" class="img-fluid rounded shadow mb-4">
 
     <!-- Texto a copiar -->
-    <p id="texto" class="lead">Texto que se copiará al portapapeles</p>
+   
 
     <!-- Botón -->
     <button class="btn btn-primary" onclick="copiar()">Copiar Texto</button>
@@ -32,6 +36,13 @@
   <script>
     function copiar() {
       const texto = document.getElementById("texto").innerText;
+      navigator.clipboard.writeText(texto).then(() => {
+        alert("¡Texto copiado al portapapeles!");
+      });
+    }
+
+    function copiar() {
+      const texto = document.getElementById("texto2").innerText;
       navigator.clipboard.writeText(texto).then(() => {
         alert("¡Texto copiado al portapapeles!");
       });
