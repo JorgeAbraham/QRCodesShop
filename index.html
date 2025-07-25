@@ -18,8 +18,15 @@
   <div class="container">
     <h1 class="mb-4">Cuenta bancaria para Transferencias</h1>
     <h1 class="mb-4"> <p id="texto" class="lead">4217 4701 5062 2323</p>  </h1>
+    <button class="btn btn-primary" onclick="copiar()">Copiar Cuenta</button>
     <h1 class="mb-4">Banco Oxxo Spin</h1>
     <h1 class="mb-4"> Nombre:  <p id="texto2" class="lead">Jorge Abaham Gomez Granados</p>  </h1>
+    <button class="btn btn-primary" onclick="copiar2()">Copiar Nombre</button>
+    <h1 class="mb-4"><a href="https://wa.me/528125130637" target="_blank">
+        Escríbenos por WhatsApp
+        </a> </h1>
+    
+    
     
 
     <!-- Imagen que se adapta -->
@@ -28,8 +35,7 @@
     <!-- Texto a copiar -->
    
 
-    <!-- Botón -->
-    <button class="btn btn-primary" onclick="copiar()">Copiar Texto</button>
+    
   </div>
 
   <!-- Bootstrap JS + clipboard function -->
@@ -41,7 +47,7 @@
       });
     }
 
-    function copiar() {
+    function copiar2() {
       const texto = document.getElementById("texto2").innerText;
       navigator.clipboard.writeText(texto).then(() => {
         alert("¡Texto copiado al portapapeles!");
